@@ -1,0 +1,18 @@
+# YAML .yml for GitHub Actions workflow
+# 6 different definitions
+# 1. Workflow 
+# 2. Event 
+# How do I want to trigger this workflow?
+on:
+    workflow_dispatch: # Manually trigger the workflow from the GitHub UI
+# 3. Jobs
+jobs:
+    example-job:
+# 4. Runner - where am I running this job?
+        runs-on: ubuntu-latest
+# 5. Steps - what are the individual steps that make up this job?
+        steps:
+            - name: print hello world
+              run: echo "Hello, World!"
+
+# 6. Actions - what are the individual actions that make up this step? these are resuable tools
