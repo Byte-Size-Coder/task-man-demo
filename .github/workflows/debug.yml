@@ -1,0 +1,17 @@
+name: Debug Workflow
+
+on:
+    workflow_dispatch:
+jobs:
+    debug:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Step 1
+              run: echo "Step 1 running"
+
+            - name: Step 2
+              run: exit 1
+
+            - name: Step 3
+              run: echo "You will never see this"
