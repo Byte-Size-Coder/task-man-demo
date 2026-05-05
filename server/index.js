@@ -44,6 +44,7 @@ app.put("/tasks/:id/complete", async (req, res) => {
   if (!updatedTask) {
     return res.status(404).json({ message: "Task not found" });
   }
+  console.log("Changed")
 
   res.json(updatedTask);
 });
