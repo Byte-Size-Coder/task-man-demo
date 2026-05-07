@@ -1,0 +1,15 @@
+name: Deploy Client DEV Project With Render
+
+on:
+    push:
+        branches: [dev]
+        paths:
+            - 'client/**'
+            
+jobs:
+    deploy-client:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Render Deploy Client
+          run: curl ${{ secrets.RENDER_CLIENT_DEV_HOOK }}

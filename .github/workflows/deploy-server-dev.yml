@@ -1,0 +1,15 @@
+name: Deploy Server DEV Project With Render
+
+on:
+    push:
+        branches: [dev]
+        paths:
+            - 'server/**'
+            
+jobs:
+    deploy-server:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Render Deploy Server
+          run: curl ${{ secrets.RENDER_SERVER_DEV_HOOK }}
