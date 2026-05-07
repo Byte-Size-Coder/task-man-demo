@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="app-title">Task Man 2.1</h1>
+      <h1 className="app-title">Task Man Live</h1>
       <div className="task-input-row">
         <input
           className="task-input"
