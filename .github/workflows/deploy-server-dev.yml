@@ -5,7 +5,7 @@ on:
         branches: [dev]
         paths:
             - 'server/**'
-            
+    workflow_dispatch:        
 jobs:
     deploy-server:
         runs-on: ubuntu-latest
