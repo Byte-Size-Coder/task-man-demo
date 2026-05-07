@@ -39,6 +39,7 @@ function App() {
   return (
     <div className="app">
       <h1 className="app-title">Task Man Live</h1>
+      <h2 className="app-title">A way to manage tasks</h2>
       <div className="task-input-row">
         <input
           className="task-input"
