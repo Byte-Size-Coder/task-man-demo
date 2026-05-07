@@ -48,7 +48,9 @@ function App() {
         <button className="add-button" onClick={addTask}>Add</button>
       </div>
       <div className="task-list">
-        {tasks.map((t) => (
+        <div style={{ marginBottom: "40px" , width: "100%"}}>
+          <h2 className="task-list-title">Pending Tasks</h2>
+          {tasks.filter((t) => !t.completed).map((t) => (
           <div key={t._id} className="task-card">
             <p className={`task-text ${t.completed ? "task-text-completed" : ""}`}>
               {t.text}
@@ -70,6 +72,27 @@ function App() {
             </div>
           </div>
         ))}
+        </div>
+
+        <div style={{ marginBottom: "40px" , width: "100%"}}>
+          <h2 className="task-list-title">Completed Tasks</h2>
+          {tasks.filter((t) => t.completed).map((t) => (
+          <div key={t._id} className="task-card">
+            <p className={`task-text ${t.completed ? "task-text-completed" : ""}`}>
+              {t.text}
+            </p>
+            <div className="task-actions">
+              <button
+                onClick={() => deleteTask(t._id)}
+                className="action-button"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        ))}
+        </div>
+        
       </div>
 
     </div>
